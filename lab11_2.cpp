@@ -4,6 +4,7 @@ using namespace std;
 
 //Write function prototype here
 
+int gcd(int ,int );
 int main(){
 	cout << gcd(25,15) << "\n";
 	cout << gcd(144,60) << "\n";
@@ -13,6 +14,16 @@ int main(){
 	cout << gcd(51,255) << "\n";
 	
 	return 0;
+}
+int gcd(int x,int y)
+{
+	if(x%y==0)
+	return y;
+	else
+	{
+		return gcd(y,x%y);
+	}
+	
 }
 
 //Write function definition here
